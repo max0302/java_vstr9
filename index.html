@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BOM</title>
+
+	</style>
+</head>
+<body>
+	<div class="counter"></div>
+	<div>
+		<button class="start">Запустить таймер!</button>
+		<button class="stop">Остановить таймер!</button>
+	</div>
+	<div class="time"></div>
+</body>
+	<script>
+
+		//window
+		// let popup = window.open('http://newman.com.ua', 'shop', width=800, height=800, resizable=true);
+		// setTimeout(()=>{popup.close();}, 5000);
+		// setInterval(()=>{
+		// 	document.querySelector('.time').innerHTML = '<h1>' + new Date().toLocaleString() + '</h1>';
+
+		// }, 1000);
+
+		// //history
+		// alert(history.length);
+		// history.back();
+		// history.forward();
+		// history.go(-2);
+
+		// //location
+		// console.log(`Строка запроса: ${location.href}`);
+		// console.log(`Путь к ресурсу: ${location.pathname}`);
+		// console.log(`Схема: ${location.origin}`);
+		// console.log(`Протокол: ${location.protocol}`);
+		// console.log(`Порт: ${location.port}`);
+		// console.log(`Хост: ${location.host}`);
+		// console.log(`Имя хоста: ${location.hostname}`);
+		// console.log(`Хэш: ${location.hash}`);
+		// console.log(`Поиск: ${location.search}`);
+		// location.assign("");
+		// location.replace("");
+		// //жесткая перезагрузка с очисткой диска
+		// location.reload(true);
+
+		// //navigator
+		// navigator.userAgent;
+		// navigator.geolocation.getCurrentPosition();
+
+		let timerId = null;
+		document.querySelector('.start').addEventListener('click', () =>
+		{
+			let i=0;
+			timerId = setInterval(()=>{
+				i++;
+			document.querySelector('.counter').innerHTML = '<h1>' + i + '</h1>';
+			}, 1000);
+		});
+		document.querySelector('.stop').addEventListener('click', () =>
+		{
+			clearInterval(timerId);
+		});
+
+
+
+		setInterval(()=>{
+			GregorianCalendar Calendar=new GregorianCalendar();
+			document.querySelector('.time').innerHTML = '<h1>' + Calendar.toLocaleString() + '</h1>';
+
+		}, 1000);
+	</script>
+</html>
