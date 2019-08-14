@@ -7,14 +7,75 @@
 	</style>
 </head>
 <body>
+
+	<p>Задания 1 и 2</p>
 	<div class="counter"></div>
 	<div>
 		<button class="start">Запустить таймер!</button>
 		<button class="stop">Остановить таймер!</button>
 	</div>
+
+	<p>Задание 3</p>
 	<div class="time"></div>
+
+	<p>Задание 4</p>
+	<header id="timer4">999</header>
+	<div id="p4"></div>
+	<button id = "btn4">Запустить обратный счет!</button>
+
+<style>
+    .carusel>img{
+        height: 350px;
+        margin: 50px;
+    }
+</style>
+<div class="carusel" id="carusel">
+	<p>Задание 5</p>
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+    <img src="images/3.jpg" alt="">
+</div>
+<button id="carus" style="margin-left: 500px">Запустить карусель!</button>
+
+<style>
+		.carusel6 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .carusel6>img {
+            height: 350px;
+            margin: 50px;
+        }
+</style>
+<div class="carusel6" id="carusel6">
+	<p>Задание 6</p>
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+    <img src="images/3.jpg" alt="">
+    <img src="images/4.jpg" alt="">
+    <img src="images/5.jpg" alt="">
+</div>
+<button id="carus61" style="margin-left: 500px">Запустить карусель!</button>
+<button id="carus62" style="margin-left: 500px">Остановить карусель!</button>
+
+<p>Задание 7</p>
+<p>До полуночи осталось</p>
+    <table border="1">
+        <tr>
+            <th>Часы</th>
+            <th>Минуты</th>
+            <th>Секунды</th>
+        </tr>
+        <tr>
+            <th id="h">0</th>
+            <th id="m">0</th>
+            <th id="s">0</th>
+        </tr>
+    </table>
 </body>
-	<script>
+	<script src="js/1.js">
 
 		//window
 		// let popup = window.open('http://newman.com.ua', 'shop', width=800, height=800, resizable=true);
@@ -49,26 +110,31 @@
 		// navigator.userAgent;
 		// navigator.geolocation.getCurrentPosition();
 
-		let timerId = null;
-		document.querySelector('.start').addEventListener('click', () =>
-		{
-			let i=0;
-			timerId = setInterval(()=>{
-				i++;
-			document.querySelector('.counter').innerHTML = '<h1>' + i + '</h1>';
-			}, 1000);
-		});
-		document.querySelector('.stop').addEventListener('click', () =>
-		{
-			clearInterval(timerId);
-		});
+
+
+		// let timerId = null;
+		// document.querySelector('.start').addEventListener('click', () =>
+		// {
+		// 	let i=0;
+		// 	timerId = setInterval(()=>{
+		// 		i++;
+		// 	document.querySelector('.counter').innerHTML = '<h1>' + i + '</h1>';
+		// 	}, 1000);
+		// });
+		// document.querySelector('.stop').addEventListener('click', () =>
+		// {
+		// 	clearInterval(timerId);
+		// });
 
 
 
-		setInterval(()=>{
-			GregorianCalendar Calendar=new GregorianCalendar();
-			document.querySelector('.time').innerHTML = '<h1>' + Calendar.toLocaleString() + '</h1>';
+		// setInterval(()=>{
+		// 	document.querySelector('.time').innerHTML = '<h1>' + new Date().toLocaleTimeString() + '</h1>';
 
-		}, 1000);
+		// }, 1000);
+
+
+
+
 	</script>
 </html>
